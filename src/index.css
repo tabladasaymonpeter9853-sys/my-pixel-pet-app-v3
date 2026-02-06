@@ -1,6 +1,71 @@
-/* Basic cleanup so things don't look broken */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
 body {
-  font-family: sans-serif;
-  margin: 2rem;
-  background-color: #f0f0f0;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0b0c20;
+  color: #f6f5ff;
+}
+
+/* Shared pixel button style */
+.pixel-button {
+  appearance: none;
+  background-color: #555;
+  border: none;
+  color: white;
+  padding: 14px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-family: 'Press Start 2P', monospace;
+  cursor: pointer;
+  box-shadow:
+    4px 4px 0 #000,
+    -4px -4px 0 #000,
+    inset 2px 2px 0 #888,
+    inset -2px -2px 0 #333;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+.pixel-button:hover {
+  background-color: #777;
+  box-shadow:
+    6px 6px 0 #000,
+    -2px -2px 0 #000,
+    inset 2px 2px 0 #aaa,
+    inset -2px -2px 0 #555;
+  transform: translate(-2px, -2px);
+}
+
+.pixel-button:active {
+  box-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    inset 2px 2px 0 #333,
+    inset -2px -2px 0 #888;
+  transform: translate(2px, 2px);
+}
+
+.pixel-button--dark {
+  background-color: #1f1f1f;
+  color: #f7e07a;
+}
+
+.pixel-button--sm {
+  padding: 10px 12px;
+  font-size: 10px;
+}
+
+a.pixel-button {
+  text-decoration: none;
 }

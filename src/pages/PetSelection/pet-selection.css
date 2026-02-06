@@ -1,0 +1,103 @@
+/* Pet Menu Page (wireframe) */
+.petMenu {
+  min-height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.petMenu::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+.petMenu > * {
+  position: relative;
+  z-index: 1;
+}
+
+.petMenu__top {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.petMenu__title {
+  margin: 0;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  text-align: center;
+  color: #1a1a1a;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+/* Fix HOME button size: set min-width so it doesn’t shrink; change 72px to adjust. */
+.petMenu__homeBtn {
+  min-width: 72px;
+  white-space: nowrap;
+}
+
+.petMenu__spacer {
+  justify-self: end;
+  width: 72px;
+}
+
+.petMenu__grid {
+  width: min(420px, 100%);
+  margin: 0 auto;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  align-content: start;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(2px);
+}
+
+.petMenu__card {
+  border: 2px solid rgba(0, 0, 0, 0.65);
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.55);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.petMenu__card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.55);
+}
+
+.petMenu__card:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.55);
+}
+
+.petMenu__sprite {
+  width: 100%;
+  max-width: 90px;
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.35));
+}
+
+@media (max-width: 360px) {
+  .petMenu__grid {
+    gap: 10px;
+  }
+}

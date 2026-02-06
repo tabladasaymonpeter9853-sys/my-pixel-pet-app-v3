@@ -1,0 +1,72 @@
+
+
+.homeScreen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 16px 28px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.homeScreen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.55) 100%);
+  pointer-events: none;
+}
+
+.homeScreen > * {
+  position: relative;
+  z-index: 1;
+}
+
+.homeScreen__header {
+  padding-top: 8px;
+}
+
+.homeScreen__title {
+  font-family: 'Press Start 2P', monospace;
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #f7e07a;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+.homeScreen__stage {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.homeScreen__pet {
+  width: min(200px, 65vw);
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.5));
+}
+
+.homeScreen__menu {
+  width: min(340px, 90vw);
+  display: grid;
+  gap: 14px;
+  padding-bottom: 6px;
+}
+
+.homeScreen__btn {
+  width: 100%;
+}
+
+@media (max-width: 380px) {
+  .homeScreen__title {
+    font-size: 18px;
+  }
+}

@@ -4,13 +4,13 @@ import { getFirestore } from "firebase/firestore";
 // TODO: Replace the following with your app's Firebase project configuration
 // You can find this in your Firebase Console -> Project Settings -> General -> Your Apps
 const firebaseConfig = {
-    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-    appId: import.meta.env.VITE_FIREBASE_APP_ID,
-    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyCUTXkEEs_iqcr7PBB-WrTU2yjFpXMOGe4",
+  authDomain: "my-pixel-pet-app-v3.firebaseapp.com",
+  projectId: "my-pixel-pet-app-v3",
+  storageBucket: "my-pixel-pet-app-v3.firebasestorage.app",
+  messagingSenderId: "1018976089490",
+  appId: "1:1018976089490:web:66b50e3d27972b17aa3d4b",
+  measurementId: "G-PPC28Y19V1"
 };
 
 // Initialize Firebase
